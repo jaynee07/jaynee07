@@ -23,4 +23,14 @@ Here are some ideas to get you started:
 - **결과**: 베타회귀·XGBoost·MLP·BGE-M3 임베딩 모델과 비교 실험한 결과, 표본이 작은(~170일) 상황에서 단순 선형 모델인 Bradley–Terry GLM이 가장 낮은 오차(WMAE 0.066)를 기록
 - **스택**: Python, pandas, statsmodels(GLM), XGBoost, scikit-learn, BAAI/bge-m3
 
-🔗 [Repo](https://github.com/jaynee07/lunch_prediction)
+🔗 [Repo: lunch_prediction](https://github.com/jaynee07/lunch_prediction)
+
+### Predicting Cafeteria Lunch Choice Share
+Predicts, from menu text alone, what share of diners will choose the **Korean set** vs. the **single-plate special** on a given day. Total headcount is driven by weekday/staffing and left out of scope — the target is only the part the menu actually moves: how the choice splits between the two counters.
+
+- **Approach**: Menus are vectorized into keyword groups (noodles, soups/stews, fried food, spicy dishes, etc.); the Korean−special keyword difference feeds a Bradley–Terry binomial GLM, treating each day as a head-to-head "Korean vs. special" contest
+- **Validation**: 5-fold `TimeSeriesSplit` (never trains on the future) scored with headcount-weighted MAE (WMAE)
+- **Result**: Benchmarked against beta regression, XGBoost, MLP, and BGE-M3 sentence embeddings — with a small sample (~170 days), the simple linear Bradley–Terry GLM won out with the lowest error (WMAE 0.066)
+- **Stack**: Python, pandas, statsmodels (GLM), XGBoost, scikit-learn, BAAI/bge-m3
+
+🔗 [Repo: lunch_prediction](https://github.com/<your-username>/lunch_prediction)
