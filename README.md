@@ -35,4 +35,29 @@ Predicts, from menu text alone, what share of diners will choose the **Korean se
 
 </details>
 
-🔗 [Repo: lunch_prediction](https://github.com/jaynee07/lunch_prediction)
+🔗 [lunch_prediction](https://github.com/jaynee07/lunch_prediction)
+
+### 시니어 AI 말동무
+혼자 사는 시니어가 배우자·자녀·손주·친구 중 대화 상대를 골라 음성으로 일상을 나누는 웹앱. 낙상, 거동 불가, 자해처럼 당장 도움이 필요한 표현이 감지되면 보호자에게 메일로 알린다. AI는 상담사나 보호자를 대신하지 않고, 평소엔 관계에 맞는 말투로 대화를 이어가다가 위험 신호가 나오면 대화를 멈추고 사람에게 연결하는 쪽으로 동작한다.
+
+- **접근**: 위급 감지는 모델 판단에만 맡기지 않고 키워드 규칙을 우선 적용 — 같은 세션에서 같은 유형은 한 번만 알림. 관계별 페르소나 프롬프트와 안전 정책을 시스템 프롬프트로 분리 설계하고, 대화 원문은 세션 종료 24시간 후 삭제하되 한 줄 요약만 남겨 다음 대화와 자연스럽게 이어지게 함
+- **범위**: 아이디어부터정을 수행한 개인 POC(기여도 100%) — 문제 정의, UX 설계, React/FastAPI 풀스택 구현, PostgreSQL
+데이터 모델, 위급 감지·  지 포함
+- **한계**: 실제 시니어 대상 사용자 테스트나 현장 실증은 진행하지 않음 —
+사용성, 위급 감지 정확도추후 검증이 필요한 가설
+- **스택**: React 18, TypeScript, Vite, Tailwind CSS, FastAPI, SQLAlchemy
+2(async), PostgreSQL, Opeb Speech API
+
+<details>
+<summary><b>English</b></summary>
+
+#### Senior AI Companion
+A web app for older adulout daily life by voicewith a chosen partner — spouse, child, grandchild, or friend. If theconversation includes anall, inability to move, or self-harm, it detects the type and emails a configured caregiver. Thdoesn't replace a counseary conversation itcontinues in a voice fitting the relationship, and when words sound dangerous it stops the ccting the user with aperson.                                                                    
+- **Approach**: Urgent-phrase detection doesn't rely on the model alone —  keyword rules run first,ted only once per session. Relationship personas and safety rules are designed as separate prompt     layers folded into the sare deleted 24 hours after a session ends, leaving only a one-line summary so later conversations can refer back naturally
+- **Scope**: A personal POC taken from idea to a working system (100% contribution) — problem l-stack React/FastAPIimplementation, PostgreSQL data model, urgent-detection/alerting/privapolicy, and documentatio
+- **Limitation**: No user test with older adults and no field pilot — usability, detection accmotional isolation remainhypotheses to verify later
+- **Stack**: React 18, TCSS, FastAPI, SQLAlchemy 2 (async), PostgreSQL, OpenAI, Naver Clova Voice, Web Speech API
+
+</details>
+
+🔗 [senior-ai-companion](httenior-ai-companion)
