@@ -10,7 +10,7 @@ Interested in small-data modeling, interpretable ML, and text-based prediction.
 
 ## Stack
 
-`Python` · `pandas` · `scikit-learn` · `XGBoost` · `statsmodels` · `Hugging Face` · `Jupyter` · `Git`
+`Python` · `TypeScript` · `pandas` · `scikit-learn` · `XGBoost` · `statsmodels` · `Hugging Face` · `OpenAI API` · `React` · `FastAPI` · `PostgreSQL` · `Jupyter` · `Git`
 
 ## Selected work
 
